@@ -1,0 +1,73 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+import { Button } from "./Button"
+import { ButtonGroup } from "./ButtonGroup"
+import { Text } from "./Text"
+
+<Meta
+    title="Baron/Button"
+    component={Button}
+    argTypes={{
+        title: {
+            options: [
+                'Hello',
+                'World',
+                'Item Threee'
+            ]
+        },
+        onClick: { action: 'clicked' },
+    }}
+/>
+
+# Button
+
+<Text />
+
+## Outline (default)
+
+<Canvas>
+    <Story name="Single Button" args={{title: "Save"}}>{(args) => (
+        <Button {...args} />
+    )}</Story>
+    <Story name="Single Grouped Button" args={{title: "Save"}}>{(args) => (
+        <ButtonGroup>
+            <Button {...args} />
+        </ButtonGroup>
+    )}</Story>
+    <Story name="Grouped Buttons" args={{title: "Edit", title2: "Export", title3: "Save"}}>{(args) => (
+        <ButtonGroup>
+            <Button {...args} />
+            <Button {...args} title={args.title2} />
+            <Button {...args} title={args.title3} />
+        </ButtonGroup>
+    )}</Story>
+</Canvas>
+
+## Fill
+
+<Canvas>
+    <Story name="Single Button Fill" args={{title: "Save", variant: "Contained"}}>{(args) => (
+        <Button {...args} />
+    )}</Story>
+    <Story name="Grouped Buttons Fill" args={{title: "Edit", title2: "Export", title3: "Save", variant: "Contained"}}>{(args) => (
+        <ButtonGroup>
+            <Button {...args} />
+            <Button {...args} title={args.title2} />
+            <Button {...args} title={args.title3} />
+        </ButtonGroup>
+    )}</Story>
+</Canvas>
+
+## Text
+
+<Canvas>
+    <Story name="Single Button Text" args={{title: "Save", variant: "Text"}}>{(args) => (
+        <Button {...args} />
+    )}</Story>
+    <Story name="Grouped Buttons Text" args={{title: "Edit", title2: "Export", title3: "Save", variant: "Text"}}>{(args) => (
+        <ButtonGroup>
+            <Button {...args} />
+            <Button {...args} title={args.title2} />
+            <Button {...args} title={args.title3} />
+        </ButtonGroup>
+    )}</Story>
+</Canvas>

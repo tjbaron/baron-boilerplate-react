@@ -1,0 +1,42 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+import { Text } from "./Text"
+
+<Meta
+    title="Baron/Text"
+    component={Text}
+    argTypes={{}}
+/>
+
+# Example
+
+<Canvas><div>
+    <Text type="h1">Welcome</Text>
+    <Text type="body">This is my great application</Text>
+    <Text type="h2">Tutorials</Text>
+    <Text type="h3">Getting Started</Text>
+    <Text type="body">Start by installing it</Text>
+</div></Canvas>
+
+<Canvas>
+    <Story name="h1" args={{}}>{(args) => (
+        <Text type="h1" {...args} />
+    )}</Story>
+</Canvas>
+
+<Canvas>
+    <Story name="h2">{(args) => (
+        <Text type="h2" {...args} />
+    )}</Story>
+</Canvas>
+
+<Canvas>
+    <Story name="h3">{(args) => (
+        <Text type="h3" {...args} />
+    )}</Story>
+</Canvas>
+
+<Canvas>
+    <Story name="p">{(args) => (
+        <Text {...args} />
+    )}</Story>
+</Canvas>
