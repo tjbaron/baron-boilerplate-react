@@ -1,0 +1,23 @@
+
+body {
+    background: rgba(224,224,224);
+    margin: 0px; padding: 0px;
+}
+
+header {
+    position: relative;
+    display: flex; flex-direction: row;
+    box-sizing: border-box;
+    height: 100px; width: 100vw;
+    background: rgb(10,42,50);
+    color: white;
+    padding: 0px 30px;
+    align-items: center;
+}
+
+section {
+    position: relative;
+    display: flex; flex-direction: row;
+    box-sizing: border-box;
+    padding: 30px 30px;
+}

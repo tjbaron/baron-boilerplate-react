@@ -23,12 +23,7 @@ module.exports = {
         target: 'http://localhost:3000',
         router: () => 'http://localhost:4000',
         logLevel: 'debug',
-      }
-    }
-  },
-  resolve: {
-    alias: {
-      '@mui/styled-engine': '@mui/styled-engine-sc',
+      },
     },
   },
   module: {
@@ -43,13 +38,13 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
         type: 'asset/resource',
-      }
-    ]
+      },
+    ],
   },
   devtool: prod ? undefined : 'source-map',
   plugins: [
